@@ -1,0 +1,2159 @@
+<!-- Douglas Silva - 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <title>R9Picker :: Documentation</title>
+    <meta name="description" content="Rainbow9 Picker (R9Picker) is a web color picker component created over the Rainbow9 (R9) color library.">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" id="favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="top_bar">
+        <span id="library_name">Rainbow9 Picker</span>
+        <span class="library_version"></span>
+        <a title="My page" id="logo" href="https://hms-douglas.github.io/" target="_blank" rel="noopener noreferrer"></a>
+        <a title="Project on github" id="github" href="https://github.com/hms-douglas/rainbow9picker" target="_blank" rel="noopener noreferrer"></a>
+        <a title="Support me" id="support_me" href="https://www.paypal.com/donate/?hosted_button_id=6FPD9BUFGXD44" target="_blank" rel="noopener noreferrer"></a>
+        <input id="toggle" type="checkbox">
+        <label for="toggle" id="ui-hamburger">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </label>
+    </div>
+    <div id="sidebar">
+        <div class="sidebar_title showing">
+            <span data-goto="DEMO">Demo</span>
+        </div>
+
+        <div class="sidebar_title showing">
+            <span data-goto="GETTING_STARTED">Getting started</span>
+
+            <div class="sidebar_subtitle" data-goto="ADDING">
+                <span>Adding the library</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="ADDING_JSDELIVR">
+                    <span>jsDelivr</span>
+                </div>
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="ADDING_DOWNLOAD">
+                    <span>Download</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="CONSTRUCTOR">R9Picker</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="TYPE">
+                <span>TYPE</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="METHODS">Methods</span>
+
+            <div class="sidebar_subtitle" data-goto="COLOR">
+                <span>Color</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_COLOR">
+                    <span>COLOR</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_COLOR">
+                    <span>setColor()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="SIZE">
+                <span>Size</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_SIZE">
+                    <span>SIZE</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_SIZE">
+                    <span>setSize()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="VISIBILITY">
+                <span>Visibility</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="HIDE">
+                    <span>hide()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SHOW">
+                    <span>show()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="TOGGLE">
+                    <span>toggle()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="IS_SHOWING">
+                    <span>isShowing()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="TAB">
+                <span>Tab</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="TABS">
+                    <span>TAB</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_ACTIVE_TAB">
+                    <span>ACTIVE_TAB</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="GO_TO_TAB">
+                    <span>goToTab()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="HIDE_TAB">
+                    <span>hideTab()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="UNHIDE_TAB">
+                    <span>unhideTab()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="REMOVE_TAB">
+                    <span>removeTab()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="ALPHA">
+                <span>Alpha</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_ALPHA">
+                    <span>setAlphaEnabled()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="IS_ALPHA">
+                    <span>isAlphaEnabled()</span>
+                </div>
+            </div>
+            
+            <div class="sidebar_subtitle" data-goto="DARK_MODE">
+                <span>Dark mode</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_DARK_MODE">
+                    <span>setDarkMode()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="IS_DARK_MODE">
+                    <span>isDarkMode()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="CLASSIC_MODE">
+                <span>Classic mode</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_CLASSIC_MODE">
+                    <span>setClassic()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="IS_CLASSIC_MODE">
+                    <span>isClassic()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="UI_COLOR">
+                <span>UI color</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_UI_COLOR">
+                    <span>UI_COLOR</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SET_UI_COLOR">
+                    <span>setUiColor()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="PALETTE">
+                <span>Palette</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_PALETTE">
+                    <span>PALETTE</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="ADD_PALETTE">
+                    <span>addPalette()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="GET_PALETTE">
+                    <span>getPalette()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="GET_PALETTES">
+                    <span>getPalettes()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="UPDATE_PALETTE">
+                    <span>updatePalette()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="REMOVE_PALETTE">
+                    <span>removePalette()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="REMOVE_ALL_PALETTES">
+                    <span>removeAllPalettes()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="SHOW_COLOR_NAME">
+                    <span>showColorNameOnPalette()</span>
+                </div>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="IS_SHOWING_COLOR_NAME">
+                    <span>isShowingColorNameOnPalette()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="RECENTS">
+                <span>Recents</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="GET_RECENTS">
+                    <span>getRecents()</span>
+                </div>
+            </div>
+
+            <div class="sidebar_subtitle" data-goto="SAVED">
+                <span>Saved</span>
+
+                <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="GET_SAVED">
+                    <span>getSaved()</span>
+                </div>
+            </div>
+            
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_PICKER">
+                <span>PICKER</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_CONTAINER">
+                <span>CONTAINER</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="EVENTS">Events</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="VAR_EVENT">
+                <span>EVENT</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="ADD_EVENT">
+                <span>addEventListener()</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="REMOVE_EVENT">
+                <span>removeEventListener()</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="EXTRA">Extra</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="EYE_DROPPER">
+                <span>EyeDropper</span>
+            </div>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="CLICK_TO_COPY">
+                <span>Click to copy</span>
+            </div>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="LOG">Log</span>
+        </div>
+    
+        <div class="sidebar_title">
+            <span data-goto="R9">Rainbow9</span>
+        </div>
+
+        <div class="sidebar_title">
+            <span data-goto="LICENSE">License</span>
+
+            <div class="sidebar_subtitle sidebar_subtitle-method" data-goto="CREDITS">
+                <span>Credits</span>
+            </div>
+        </div>
+
+        <div id="sidebar_topbar">
+            <div class="helper">
+                <a title="My page" id="logo" href="https://hms-douglas.github.io/" target="_blank" rel="noopener noreferrer"></a>
+                <a title="Project on github" id="github" href="https://github.com/hms-douglas/rainbow9picker" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <a title="Support me" id="support_me" href="https://www.paypal.com/donate/?hosted_button_id=6FPD9BUFGXD44" target="_blank" rel="noopener noreferrer"></a>
+            <span class="library_version"></span>
+        </div>
+    </div>
+
+    <div id="documentation">
+        <div class="block" id="DEMO">
+            <span class="title">Demo</span>
+
+            <div id="CONTAINER_DEMO">
+                <div class="demo_title">Type: Complete</div>
+                <div class="demo_picker" id="DEMO_COMPLETE"></div>
+                <div class="demo_button" id="DEMO_SHOW_COMPLETE" style="display: none;">Show</div>
+
+                <div class="demo_title">Type: Basic</div>
+                <div class="demo_picker" id="DEMO_BASIC"></div>
+
+                <div class="demo_title">Type: Minimal</div>
+                <div class="demo_picker" id="DEMO_MINIMAL"></div>
+
+                <div class="demo_title">Type: Unique</div>
+                <div class="demo_picker" id="DEMO_UNIQUE"></div>
+                <div class="demo_picker" id="DEMO_UNIQUE--CIRCLE"></div>
+                <div class="demo_picker" id="DEMO_UNIQUE--TRIANGLE"></div>
+                <div class="demo_picker" id="DEMO_UNIQUE--PALETTE"></div>
+            </div>
+
+            <div id="CONTAINER_DEMO--SETTINGS">
+                <div class="demo_row">
+                    <span>Some customizations example</span>
+                </div>
+                <div class="demo_row">
+                    <input class="toggle demo_setting" type="checkbox" id="DEMO_THEME">
+                    <label for="DEMO_THEME">Dark mode</label>
+                </div>
+                <div class="demo_row">
+                    <input class="toggle demo_setting" type="checkbox" id="DEMO_CLASSIC">
+                    <label for="DEMO_CLASSIC">Classic mode</label>
+                </div>
+                <div class="demo_row">
+                    <input class="toggle demo_setting" type="checkbox" id="DEMO_ALPHA" checked>
+                    <label for="DEMO_ALPHA">Alpha channel</label>
+                </div>
+                <div class="demo_row">
+                    <input class="toggle demo_setting" type="checkbox" id="DEMO_NAME">
+                    <label for="DEMO_NAME">Name on palette</label>
+                </div>
+                <div class="demo_row">
+                    <label style="font-size: 15px;">*Click on "Set" to change the UI color (It is not the default action of the "Set" button! I am just to demonstrating the change of the UI color using this button).</label>
+                </div>
+                <div class="demo_row" style="margin-top: 20px;">
+                    <span>Some events example</span>
+                </div>
+                <div class="demo_row">
+                    <div class="demo_event_color" id="DEMO_EV_PICKING"></div>
+                    <div class="demo_event_name">Picking</div>
+                </div>
+                <div class="demo_row">
+                    <div class="demo_event_color" id="DEMO_EV_END"></div>
+                    <div class="demo_event_name">Picking end</div>
+                </div>
+                <div class="demo_row">
+                    <div class="demo_event_color" id="DEMO_EV_SET"></div>
+                    <div class="demo_event_name">Set</div>
+                </div>
+                <div class="demo_row">
+                    <div class="demo_event_color" id="DEMO_EV_INPUT"></div>
+                    <div class="demo_event_name">Input</div>
+                </div>
+                <div class="demo_row">
+                    <div class="demo_event_color" id="DEMO_EV_SAVED"></div>
+                    <div class="demo_event_name">Saved</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="GETTING_STARTED">
+            <span class="title">Getting started</span>
+            
+            <div class="text">
+                <p>Rainbow9 Picker (R9Picker) is a web color picker component created using the <a class="text_link" href="https://hms-douglas.github.io/rainbow9" target="_blank" rel="noopener noreferrer">Rainbow9 (R9)</a> color library.</p>
+            </div>
+
+            <div class="block sub_block" id="ADDING">
+                <span class="title">Adding the library</span>
+                
+                <div class="text">
+                    <p>You can download the library and host it or you can use it through jsDelivr.</p> 
+                </div>
+
+                <div class="block sub_block" id="ADDING_JSDELIVR">
+                    <span class="title">jsDelivr</span>
+
+                    <div class="text">
+                        <p>Add the following line to the your html:</p> 
+                    </div>
+
+<pre><code class="language-javascript">
+&lt;script src="https://cdn.jsdelivr.net/gh/hms-douglas/rainbow9picker@1.0.0/dist/r9picker.min.js"&gt;&lt;/script&gt;
+</code></pre>
+                </div>
+
+                <div class="block sub_block" id="ADDING_DOWNLOAD">
+                    <span class="title">Download</span>
+
+                    <div class="text">
+                        <p>Download the file <a class="text_link" href="https://github.com/hms-douglas/rainbow9picker/tree/main/dist/" target="_blank" rel="noopener noreferrer">here</a>.</p> 
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="block" id="CONSTRUCTOR">
+            <span class="title">R9Picker<span class="subtitle const"></span><span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+
+            <table class="method_details table-auto">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>containerSelector</td>
+                        <td>String</td>
+                        <td>The html element selector that will hold the color picker. It is recommended to use a different container for each color picker.</td>
+                    </tr>
+                    <tr>
+                        <td>pickerType</td>
+                        <td><span class="text_link" data-goto="TYPE">R9Picker.TYPE constant</span></td>
+                        <td>The type of color picker to be created.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="block sub_block">
+                <span class="title">Example</span>
+
+<pre><code class="language-javascript">
+const picker1 = new R9Picker("#container", R9Picker.TYPE.COMPLETE);
+
+const picker2 = new R9Picker("#container + div", R9Picker.TYPE.BASIC);
+
+//If a simple string is passed it is considered as an ID, therefore "container" = "#container"
+const picker3 = new R9Picker("container", R9Picker.TYPE.MINIMAL);
+
+//If case of null, will use the body as container. NOT RECOMMENDED!
+const picker3 = new R9Picker(null, R9Picker.TYPE.UNIQUE);
+</code></pre>
+            </div>
+
+            <div class="block sub_block" id="TYPE">
+                <span class="title">TYPE</span>
+
+                <span class="text">
+                    <p>The type of color picker to be created. All types can be checked on this <span class="text_link" data-goto="DEMO">example</span>.</p>
+                </span>
+
+                <table class="method_details table-auto">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>R9Picker constant</th>
+                            <th>Details</th>
+                            <th>Example</th>
+                            <th>Since</th>
+                        </tr>
+                        <tr>
+                            <td>Complete</td>
+                            <td>R9Picker.TYPE.COMPLETE</td>
+                            <td>Color picker with all features available.</td>
+                            <td><span class="text_link" data-goto="DEMO_COMPLETE">Show</span></td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Basic</td>
+                            <td>R9Picker.TYPE.BASIC</td>
+                            <td>Does not contain: input fields; recent tabs; old color; button to restore color; set and cancel button.</td>
+                            <td><span class="text_link" data-goto="DEMO_BASIC">Show</span></td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Minimal</td>
+                            <td>R9Picker.TYPE.MINIMAL</td>
+                            <td>The same as R9Picker.TYPE.BASIC, but without the bottom bar and the saved tab.</td>
+                            <td><span class="text_link" data-goto="DEMO_MINIMAL">Show</span></td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Unique</td>
+                            <td>R9Picker.TYPE.UNIQUE</td>
+                            <td>Only one tab showing. The user cannot navigate between the tabs, the shown tab needs to be set by internal code.</td>
+                            <td><span class="text_link" data-goto="DEMO_UNIQUE">Show</span></td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="block" id="METHODS">
+            <span class="title">Methods</span>
+
+            <div class="block sub_block" id="COLOR">
+                <span class="title">Color</span>
+
+                <span class="text"><p>Related to the current color. The default color is #147097.</p></span>
+
+   
+                <div class="block sub_block" id="VAR_COLOR">
+                    <span class="title">COLOR<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text multiline">
+                        <p>Variable used to set or get the current color.</p>
+                        <p>As set: accepts colors in all strings format available in the R9 library. You can check the string formats <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">here</a>. This does not trigger any event!</p>
+                        <p>As get: returns an object with the current color (in all color spaces accepted) in string format.</p>
+                    </span>
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To set the color
+picker.COLOR = "#FF0000";
+
+//To set the color
+picker.COLOR = "rgba(163, 56, 63, 0.5)";
+
+//To get the current picked color in all formats:
+picker.COLOR;
+/*
+Returns: 
+    {
+        rgb: "rgb(20, 112, 151, 128)",
+        cmyk: "cmyk(87%, 26%, 0%, 41%, 128)",
+        hsl: "hsl(198°, 77%, 34%, 128)",
+        hsv: "hsv(198°, 87%, 59%, 128)",
+        Lab: "Lab(44.2, -11.1, -28.3, 128)",
+        hex: "#14709780"
+    }
+*/
+
+//To get the current picked color in hex:
+picker.COLOR.hex;
+//Returns: '#14709780'
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="SET_COLOR">
+                    <span class="title">setColor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Set/change the current color.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>String (See <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">formats</a>)</td>
+                                <td>Yes</td>
+                                <td>The color, in string format, to be set as the current one. This does not trigger any event!</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.setColor("#FF0000");
+
+picker.setColor("rgba(163, 56, 63, 0.5)");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="SIZE">
+                <span class="title">Size</span>
+
+                <span class="text"><p>Related to the picking are size (width and height, aspect ratio of 1:1). The default size of the picking is 202 px.</p></span>
+
+   
+                <div class="block sub_block" id="VAR_SIZE">
+                    <span class="title">SIZE<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text multiline">
+                        <p>Variable used to set or get the width/height of the picking area.</p>
+                        <p>As set: accepts a number.</p>
+                        <p>As get: returns the size number.</p>
+                    </span>
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To set the picking area size
+picker.SIZE = 300;
+
+//To get the current picking area size
+picker.SIZE;
+//Returns: 300
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="SET_SIZE">
+                    <span class="title">setSize()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Set/change the current picking area width/height.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>size</td>
+                                <td>Number</td>
+                                <td>Yes</td>
+                                <td>The number (pixels) for the width/height of the picking area.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.setSize(300);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="VISIBILITY">
+                <span class="title">Visibility</span>
+
+                <span class="text"><p>Related to the visibility of the color picker element or the color picker container element.</p></span>
+
+                <div class="block sub_block" id="HIDE">
+                    <span class="title">hide()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>To hide the element from view. By default it will hide the color picker element, not the color picker container element.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>hideContainer</td>
+                                <td>Boolean</td>
+                                <td>No</td>
+                                <td>In case of true will hide the container element instead of the color picker element.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//Hides the color picker element
+picker.hide();
+
+//Hides the color picker container element.
+picker.hide(true);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="SHOW">
+                    <span class="title">show()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>To show the element. By default it will show the color picker element, not the color picker container element.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>showContainer</td>
+                                <td>Boolean</td>
+                                <td>No</td>
+                                <td>In case of true will show the container element instead of the color picker element.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//Shows the color picker element
+picker.show();
+
+//Shows the color picker container element.
+picker.show(true);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="TOGGLE">
+                    <span class="title">toggle()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Shows the element if it is hidden or hide the element if it is being shown. By default it will show/hide the color picker element, not the color picker container element.</p>
+                    </span>
+    
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>toggleContainer</td>
+                                <td>Boolean</td>
+                                <td>No</td>
+                                <td>In case of true will show/hide the container element instead of the color picker element.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//Shows/hides the color picker element
+picker.toggle();
+
+//Shows/hides the color picker container element.
+picker.toggle(true);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="IS_SHOWING">
+                    <span class="title">isShowing()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                        
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Whether the color picker is being shown or not.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.isShowing();
+//Returns: true
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="TAB">
+                <span class="title">Tab</span>
+
+                <span class="text">
+                    <p>Related to the tabs ("screens").</p>
+                </span>
+
+                <div class="block sub_block" id="TABS">
+                    <span class="title">TAB</span>
+    
+                    <span class="text">
+                        <p>Constant with all tabs available. Each tab represents a "screen" in the color picker.</p>
+                    </span>
+    
+                    <table class="method_details table-auto">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>R9Picker constant</th>
+                                <th>Details</th>
+                                <th>Since</th>
+                            </tr>
+                            <tr>
+                                <td>Square</td>
+                                <td>R9Picker.TAB.SQUARE</td>
+                                <td>The default tab. Shows a squared color picker.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Triangle</td>
+                                <td>R9Picker.TAB.TRIANGLE</td>
+                                <td>Shows a triangular color picker. This tab is under beta mode, therefore it can present wrong results. By default this tab is hidden.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Circle</td>
+                                <td>R9Picker.TAB.CIRCLE</td>
+                                <td>Shows a circular color picker. This tab is under beta mode, therefore it can present wrong results. By default this tab is hidden.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Scheme</td>
+                                <td>R9Picker.TAB.SCHEME</td>
+                                <td>Shows a harmony palette for the color picked, includes the harmonies/schemes: complementary; split complementary; triadic; tetradic; square; analogous; monochromatic; shades; tints and tones.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Palette</td>
+                                <td>R9Picker.TAB.PALETTE</td>
+                                <td>Shows the palettes set by you. See <span class="text_link" data-goto="PALETTE">Palette</span>.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Saved</td>
+                                <td>R9Picker.TAB.SAVED</td>
+                                <td>Shows all colors saved by the user. No methods available to change this palette. The colors are saved in the browser localstorage. This tab is not available in the type <span class="text_link" data-goto="TYPE">R9Picker.TYPE.UNIQUE</span>. See <span class="text_link" data-goto="SAVED">Saved</span>.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Recents</td>
+                                <td>R9Picker.TAB.RECENT</td>
+                                <td>Shows all colors set by the user during the "current session". No methods available to change this palette. This tab is not available in the type <span class="text_link" data-goto="TYPE">R9Picker.TYPE.UNIQUE</span>. See <span class="text_link" data-goto="RECENTS">Recents</span>.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="block sub_block" id="VAR_ACTIVE_TAB">
+                    <span class="title">ACTIVE_TAB<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Variable indicating the current tab being shown.</p>
+                    </span>
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.ACTIVE_TAB;
+//Returns "square" //Equivalent to R9Picker.TAB.SQUARE
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="GO_TO_TAB">
+                    <span class="title">goToTab()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Shows the desired tab without user interaction. If the tab is hidden, this method will not work.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>tab</td>
+                                <td><span class="text_link" data-goto="TABS">R9Picker.TAB constant</span></td>
+                                <td>Yes</td>
+                                <td>The desired tab to be shown.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.goToTab(R9Picker.TAB.SAVED);
+
+picker.goToTab(R9Picker.TAB.RECENT);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="HIDE_TAB">
+                    <span class="title">hideTab()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Hides the tab button, but keep all elements. Can be undone. Cannot hide the active tab.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>tab</td>
+                                <td><span class="text_link" data-goto="TABS">R9Picker.TAB constant</span></td>
+                                <td>Yes</td>
+                                <td>The desired tab to be hidden.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.hideTab(R9Picker.TAB.SAVED);
+
+picker.hideTab(R9Picker.TAB.RECENT);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="UNHIDE_TAB">
+                    <span class="title">unhideTab()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Unhides the tab button.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>tab</td>
+                                <td><span class="text_link" data-goto="TABS">R9Picker.TAB constant</span></td>
+                                <td>Yes</td>
+                                <td>The desired tab to unhide.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.unhideTab(R9Picker.TAB.SAVED);
+
+picker.unhideTab(R9Picker.TAB.RECENT);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="REMOVE_TAB">
+                    <span class="title">removeTab()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Removes the tab button and all its elements and features. Cannot be undone! Cannot remove the active tab.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>tab</td>
+                                <td><span class="text_link" data-goto="TABS">R9Picker.TAB constant</span></td>
+                                <td>Yes</td>
+                                <td>The desired tab to be removed.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.removeTab(R9Picker.TAB.SAVED);
+
+picker.removeTab(R9Picker.TAB.RECENT);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="ALPHA">
+                <span class="title">Alpha</span>
+    
+                <span class="text">
+                    <p>Related to the alpha channel.</p>
+                </span>
+    
+                <div class="block sub_block" id="SET_ALPHA">
+                    <span class="title">setAlphaEnabled()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Enables/Disables the alpha channel of the color picker.</p>
+                    </span>
+    
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>In case of false the alpha channel picker bar and the inputs are still displayed, but are disabled. This does not affect the <span class="text_link" data-goto="VAR_COLOR">Color</span> variable.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To enable the alpha channel
+picker.setAlphaEnabled(true);
+
+//To disable the alpha channel
+picker.setAlphaEnabled(false);
+</code></pre>
+                    </div>
+                </div>
+    
+                <div class="block sub_block" id="IS_ALPHA">
+                    <span class="title">isAlphaEnabled()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                        
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Whether the alpha channel is enabled or not.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.isAlphaEnabled();
+//Returns: true
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="DARK_MODE">
+                <span class="title">Dark mode</span>
+
+                <span class="text">
+                    <p>Related to the dark mode. By default the color picker is shown in the light mode.</p>
+                </span>
+       
+                <div class="block sub_block" id="SET_DARK_MODE">
+                    <span class="title">setDarkMode()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Enables/Disables the dark mode.</p>
+                    </span>
+    
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>In case of true enables the dark mode.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To enable the dark mode
+picker.setDarkMode(true);
+
+//To disable the dark mode
+picker.setDarkMode(false);
+</code></pre>
+                    </div>
+                </div>
+    
+                <div class="block sub_block" id="IS_DARK_MODE">
+                    <span class="title">isDarkMode()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                        
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Whether the color picker is in dark mode or not.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.isDarkMode();
+//Returns: false
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="CLASSIC_MODE">
+                <span class="title">Classic mode</span>
+
+                <span class="text">
+                    <p>Related to the style of the color picker. Classic mode is a style with minimum design. By default the classic mode is disabled.</p>
+                </span>
+       
+                <div class="block sub_block" id="SET_CLASSIC_MODE">
+                    <span class="title">setClassic()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Enables/Disables the classic mode.</p>
+                    </span>
+    
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>In case of true enables the classic mode.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To enable the classic mode
+picker.setClassic(true);
+
+//To disable the classic mode
+picker.setClassic(false);
+</code></pre>
+                    </div>
+                </div>
+    
+                <div class="block sub_block" id="IS_CLASSIC_MODE">
+                    <span class="title">isClassic()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                        
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Whether the color picker is in the classic mode or not.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.isClassic();
+//Returns: false
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="UI_COLOR">
+                <span class="title">UI color</span>
+
+                <span class="text"><p>Related to the main UI color (icons, buttons, ranges and some text). The default UI color is #147097.</p></span>
+
+                <div class="block sub_block" id="VAR_UI_COLOR">
+                    <span class="title">UI_COLOR<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text multiline">
+                        <p>Variable used to set or get the main UI color.</p>
+                        <p>As set: accepts colors in all string format available in the R9 library. You can check the string formats <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">here</a>. Alpha channel is ignored.</p>
+                        <p>As get: returns an object with the current main UI color (in all color spaces accepted) in string format.</p>
+                    </span>
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To set the main UI color
+picker.UI_COLOR = "red";
+
+//To set the main UI color
+picker.UI_COLOR = "hsl(122°, 61%, 46%)"
+
+//To get the main UI color in all formats:
+picker.UI_COLOR;
+/*
+Returns:
+    {
+        rgb: "rgb(46, 189, 51)",
+        cmyk: "cmyk(76%, 0%, 73%, 26%)",
+        hsl: "hsl(122°, 61%, 46%)",
+        hsv: "hsv(122°, 76%, 74%)",
+        Lab: "Lab(67.1, -65.7, 61.1)",
+        hex: "#2EBD33"
+    }
+*/
+
+//To get the main UI color in rgb format:
+picker.UI_COLOR.rgb;
+//Returns: 'rgb(46, 189, 51)'
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="SET_UI_COLOR">
+                    <span class="title">setUiColor()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Set/change the main UI color. Alpha channel is ignored.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>String (See <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">formats</a>)</td>
+                                <td>Yes</td>
+                                <td>The color, in string format, to be set as the main UI color.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.setUiColor("red");
+
+picker.setUiColor("rgb(46, 189, 51)");
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="PALETTE">
+                <span class="title">Palette</span>
+
+                <span class="text">
+                    <p>Related to color palette. By default no palettes are set. The palette tab will show "Empty" if no palette is set.</p>
+                </span>
+
+                <div class="block sub_block" id="VAR_PALETTE">
+                    <span class="title">PALETTE</span>
+    
+                    <span class="text">
+                        <p>The library contains 4 built-in palettes that can accessed using the R9Picker.PALETTE constant.</p>
+                    </span>
+    
+                    <table class="method_details table-auto">
+                        <tbody>
+                            <tr>
+                                <th>R9Picker constant</th>
+                                <th>Amount of colors</th>
+                                <th>Description</th>
+                                <th>Since</th>
+                            </tr>
+                            <tr>
+                                <td><span class="text_link" data-goto="PALETTE_CLASSIC">R9Picker.PALETTE.CLASSIC</span></td>
+                                <td>11</td>
+                                <td>Basic colors.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text_link" data-goto="PALETTE_CLASSIC_LIGHT">R9Picker.PALETTE.CLASSIC_LIGHT</span></td>
+                                <td>11</td>
+                                <td>Basic light colors.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text_link" data-goto="PALETTE_MATERIAL_DESIGN">R9Picker.PALETTE.MATERIAL_DESIGN</span></td>
+                                <td>19</td>
+                                <td>2014 material design colors (variant 500).</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="text_link" data-goto="PALETTE_HUE_24">R9Picker.PALETTE.HUE_24</span></td>
+                                <td>24</td>
+                                <td>Hue range splitted into 24 colors.</td>
+                                <td><span class="s s100"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="block sub_block" id="PALETTE_CLASSIC">
+                        <span class="title">CLASSIC (colors)</span>
+                        <div data-c="#FF" style="background-color: #FFFFFF; color: #000000"></div><div data-c="#00" style="background-color: #000000; color: #FFFFFF"></div><div data-c="#7F" style="background-color: #7F7F7F; color: #000000"></div><div data-c="#880015" style="background-color: #880015; color: #FFFFFF"></div><div data-c="#ED1C24" style="background-color: #ED1C24; color: #000000"></div><div data-c="#FF7F27" style="background-color: #FF7F27; color: #000000"></div><div data-c="#FFF200" style="background-color: #FFF200; color: #000000"></div><div data-c="#22B14C" style="background-color: #22B14C; color: #000000"></div><div data-c="#00A2E8" style="background-color: #00A2E8; color: #000000"></div><div data-c="#3F48CC" style="background-color: #3F48CC; color: #FFFFFF"></div><div data-c="#A349A4" style="background-color: #A349A4; color: #FFFFFF"></div>
+                    </div>
+
+                    <div class="block sub_block" id="PALETTE_CLASSIC_LIGHT">
+                        <span class="title">CLASSIC_LIGHT (colors)</span>
+                        <div data-c="#FE" style="background-color: #FEFEFE; color: #000000"></div><div data-c="#08" style="background-color: #080808; color: #FFFFFF"></div><div data-c="#C3" style="background-color: #C3C3C3; color: #000000"></div><div data-c="#B97A57" style="background-color: #B97A57; color: #000000"></div><div data-c="#FFAEC9" style="background-color: #FFAEC9; color: #000000"></div><div data-c="#FFC90E" style="background-color: #FFC90E; color: #000000"></div><div data-c="#EFE4B0" style="background-color: #EFE4B0; color: #000000"></div><div data-c="#B5E61D" style="background-color: #B5E61D; color: #000000"></div><div data-c="#99D9EA" style="background-color: #99D9EA; color: #000000"></div><div data-c="#7092BE" style="background-color: #7092BE; color: #000000"></div><div data-c="#C8BFE7" style="background-color: #C8BFE7; color: #000000"></div>
+                    </div>
+
+                    <div class="block sub_block" id="PALETTE_MATERIAL_DESIGN">
+                        <span class="title">MATERIAL_DESIGN (colors)</span>
+                        <div data-c="#F44336" style="background-color: #F44336; color: #000000"></div><div data-c="#E91E63" style="background-color: #E91E63; color: #000000"></div><div data-c="#9C27B0" style="background-color: #9C27B0; color: #FFFFFF"></div><div data-c="#673AB7" style="background-color: #673AB7; color: #FFFFFF"></div><div data-c="#3F51B5" style="background-color: #3F51B5; color: #FFFFFF"></div><div data-c="#2196F3" style="background-color: #2196F3; color: #000000"></div><div data-c="#03A9F4" style="background-color: #03A9F4; color: #000000"></div><div data-c="#00BCD4" style="background-color: #00BCD4; color: #000000"></div><div data-c="#009688" style="background-color: #009688; color: #000000"></div><div data-c="#4CAF50" style="background-color: #4CAF50; color: #000000"></div><div data-c="#8BC34A" style="background-color: #8BC34A; color: #000000"></div><div data-c="#CDDC39" style="background-color: #CDDC39; color: #000000"></div><div data-c="#FFEB3B" style="background-color: #FFEB3B; color: #000000"></div><div data-c="#FFC107" style="background-color: #FFC107; color: #000000"></div><div data-c="#FF9800" style="background-color: #FF9800; color: #000000"></div><div data-c="#FF5722" style="background-color: #FF5722; color: #000000"></div><div data-c="#795548" style="background-color: #795548; color: #FFFFFF"></div><div data-c="#9E" style="background-color: #9E9E9E; color: #000000"></div><div data-c="#607D8B" style="background-color: #607D8B; color: #000000"></div>
+                    </div>
+
+                    <div class="block sub_block" id="PALETTE_HUE_24">
+                        <span class="title">HUE_24 (colors)</span>
+                        <div data-c="#FF0" style="background-color: #FF0; color: #000000"></div><div data-c="#FFC000" style="background-color: #FFC000; color: #000000"></div><div data-c="#FF8000" style="background-color: #FF8000; color: #000000"></div><div data-c="#FF4000" style="background-color: #FF4000; color: #000000"></div><div data-c="#F00" style="background-color: #F00; color: #000000"></div><div data-c="#FF003F" style="background-color: #FF003F; color: #000000"></div><div data-c="#FF007F" style="background-color: #FF007F; color: #000000"></div><div data-c="#FF00bF" style="background-color: #FF00bF; color: #000000"></div><div data-c="#F0F" style="background-color: #F0F; color: #000000"></div><div data-c="#C000FF" style="background-color: #C000FF; color: #000000"></div><div data-c="#8000FF" style="background-color: #8000FF; color: #FFFFFF"></div><div data-c="#4000FF" style="background-color: #4000FF; color: #FFFFFF"></div><div data-c="#00F" style="background-color: #00F; color: #FFFFFF"></div><div data-c="#003FFF" style="background-color: #003FFF; color: #FFFFFF"></div><div data-c="#007FFF" style="background-color: #007FFF; color: #000000"></div><div data-c="#00bFFF" style="background-color: #00bFFF; color: #000000"></div><div data-c="#0FF" style="background-color: #0FF; color: #000000"></div><div data-c="#00FFC0" style="background-color: #00FFC0; color: #000000"></div><div data-c="#00FF80" style="background-color: #00FF80; color: #000000"></div><div data-c="#00FF40" style="background-color: #00FF40; color: #000000"></div><div data-c="#0F0" style="background-color: #0F0; color: #000000"></div><div data-c="#3FFF00" style="background-color: #3FFF00; color: #000000"></div><div data-c="#7FFF00" style="background-color: #7FFF00; color: #000000"></div><div data-c="#BFFF00" style="background-color: #BFFF00; color: #000000"></div>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="ADD_PALETTE">
+                    <span class="title">addPalette()<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Adds a color palette.</p>
+                    </span>
+
+                    <span class="title"><span class="subtitle param"></span></span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>palette</td>
+                                <td>Array or <span class="text_link" data-goto="VAR_PALETTE">R9Picker.PALETTE constant</span></td>
+                                <td>Yes</td>
+                                <td>An array with all the colors that compose the palette. The colors must be in string format (See <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">formats</a>).</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <span class="title"><span class="subtitle ret"></span></span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Number</td>
+                                <td>The palette's ID.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To add a R9Picker constant palette
+picker.addPalette(R9Picker.PALETTE.MATERIAL_DESIGN);
+//Returns: 48 //Example of id returned
+
+//To add a custom palette
+picker.addPalette(["red", "green", "rgb(0, 0, 255)", "#FEFE00"]);
+//Returns: 50 //Example of id returned
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="GET_PALETTE">
+                    <span class="title">getPalette()<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Gets a specific color palette.</p>
+                    </span>
+
+                    <span class="title"><span class="subtitle param"></span></span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>Number</td>
+                                <td>Yes</td>
+                                <td>The palette's ID.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <span class="title"><span class="subtitle ret"></span></span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>An array with all the colors, in hex format, of the palette.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+    //To get palette with ID 48
+    picker.getPalette(48);
+    //Returns: ['#F44336FF', '#E91E63FF', '#9C27B0FF', '#673AB7FF', '#3F51B5FF', '#2196F3FF', '#03A9F4FF', '#00BCD4FF', '#009688FF', '#4CAF50FF', '#8BC34AFF', '#CDDC39FF', '#FFEB3BFF', '#FFC107FF', '#FF9800FF', '#FF5722FF', '#795548FF', '#9E9E9EFF', '#607D8BFF']
+
+    //To get palette with ID 50
+    picker.getPalette(50);
+    //Returns: ['#FF0000FF', '#008000FF', '#0000FFFF', '#FEFE00FF']
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="GET_PALETTES">
+                    <span class="title">getPalettes()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Gets all color palettes added to the color picker.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Object</td>
+                                <td>An object with all the palettes added to the color picker. The key corresponds to the palette's ID. The value is an array with all the colors in hex format.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.getPalettes();
+/*
+Returns:
+    {
+        "48": [
+            "#F44336FF",
+            "#E91E63FF",
+            "#9C27B0FF",
+            "#673AB7FF",
+            "#3F51B5FF",
+            "#2196F3FF",
+            "#03A9F4FF",
+            "#00BCD4FF",
+            "#009688FF",
+            "#4CAF50FF",
+            "#8BC34AFF",
+            "#CDDC39FF",
+            "#FFEB3BFF",
+            "#FFC107FF",
+            "#FF9800FF",
+            "#FF5722FF",
+            "#795548FF",
+            "#9E9E9EFF",
+            "#607D8BFF"
+        ], "50": [
+        "#FF0000FF",
+        "#008000FF",
+        "#0000FFFF",
+        "#FEFE00FF"
+        ]
+    }
+*/
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="UPDATE_PALETTE">
+                    <span class="title">updatePalette()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Changes the colors of a palette.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>Number</td>
+                                <td>Yes</td>
+                                <td>The palette's ID.</td>
+                            </tr>
+                            <tr>
+                                <td>palette</td>
+                                <td>Array or <span class="text_link" data-goto="VAR_PALETTE">R9Picker.PALETTE constant</span></td>
+                                <td>Yes</td>
+                                <td>An array with all the colors that compose the palette. The colors must be in string format (See <a class="text_link" href="https://hms-douglas.github.io/rainbow9/#TYPES" target="_blank" rel="noopener noreferrer">formats</a>).</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To update a palette with ID 48
+picker.updatePalette(48, R9Picker.PALETTE.HUE_24);
+
+//To update a palette with ID 50
+picker.updatePalette(50, ["red", "green", "blue", "#FEFE00"]);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="REMOVE_PALETTE">
+                    <span class="title">removePalette()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Removes a specific palette from the color picker.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>Number</td>
+                                <td>Yes</td>
+                                <td>The palette's ID.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To remove palette with ID 48
+picker.removePalette(48);
+
+//To remove palette with ID 50
+picker.removePalette(50);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="REMOVE_ALL_PALETTES">
+                    <span class="title">removeAllPalettes()<span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Removes all palettes from the color picker.</p>
+                    </span>
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To remove all palettes added
+picker.removeAllPalettes();
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="SHOW_COLOR_NAME">
+                    <span class="title">showColorNameOnPalette()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Whether to show, or hide, the color name (in hex format) from all palettes, including from the recents, saved and scheme tabs. By default the color name is hidden.</p>
+                    </span>
+
+                    <span class="title"></span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>If true the color name (in hex format) will be shown.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+//To show the color name in all palettes
+picker.showColorNameOnPalette(true);
+
+//To hide the color name from all palettes
+picker.showColorNameOnPalette(false);
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="block sub_block" id="IS_SHOWING_COLOR_NAME">
+                    <span class="title">isShowingColorNameOnPalette()<span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                        
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Whether the color name is being shown in the palettes.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+    
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+picker.isShowingColorNameOnPalette();
+//Returns: false
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="RECENTS">
+                <span class="title">Recents</span>
+
+                <span class="text multiline">
+                    <p>Related to the recents colors used by the user.</p>
+                    <p>When the user click on the button "Set" the current color is added to the recents tab.</p>
+                    <p>All color pickers added in the same page share this data.</p>
+                    <p>The colors from the recent tab are saved in a variable, therefore they are removed when the user refreshes the page, and are not shared between browser's tabs.</p>
+                </span>
+
+                <div class="block sub_block" id="GET_RECENTS">
+                    <span class="title">getRecents()<span class="subtitle static"></span><span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Gets all the colors from the recent tab palette. This methods belongs to the class not the object, however it can accessed, as a shortcut, though the object.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>An array with all the colors, in hex format, of the recent palette.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+R9Picker.getRecents();
+//Returns: ['#147097FF', '#3A5A68FF', '#DE24DDFF', '#DE238AFF', '#DEC823FF']
+
+picker.getRecents();
+//Returns: ['#147097FF', '#3A5A68FF', '#DE24DDFF', '#DE238AFF', '#DEC823FF']
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="SAVED">
+                <span class="title">Saved</span>
+
+                <span class="text multiline">
+                    <p>Related to the saved colors by the user.</p>
+                    <p>When the user click on the save button the current color is added to the saved tab.</p>
+                    <p>The colors from the saved tab are saved in the localstorage (key: "r9-picker-saved"), therefore all color pickers share the same saved palette.</p>
+                    <p>The user can unsave a color by click on it while holding the "Shift" key.</p>
+                </span>
+
+                <div class="block sub_block" id="GET_SAVED">
+                    <span class="title">getSaved()<span class="subtitle static"></span><span class="subtitle ret"></span><span class="subtitle s s100"></span></span>
+                                    
+                    <span class="text">
+                        <p>Gets all the colors from the saved tab palette. This methods belongs to the class not the object, however it can accessed, as a shortcut, though the object.</p>
+                    </span>
+
+                    <table class="method_details">
+                        <tbody>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>An array with all the colors, in hex format, of the saved palette.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <div class="block sub_block">
+                        <span class="title">Example</span>
+    
+<pre><code class="language-javascript">
+R9Picker.getSaved();
+//Returns: ['#99D9EAFF', '#2F8EA8FF', '#475E65FF', '#3498B4FF']
+
+picker.getSaved();
+//Returns: ['#99D9EAFF', '#2F8EA8FF', '#475E65FF', '#3498B4FF']
+</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="VAR_PICKER">
+                <span class="title">PICKER<span class="subtitle s s100"></span></span>
+
+                <span class="text multiline">
+                    <p>Variable holding the color picker html element.</p>
+                </span>
+
+                <div class="block sub_block">
+                    <span class="title">Example</span>
+
+<pre><code class="language-javascript">
+//To get the color picker html element
+picker.PICKER;
+//Returns: &ltdiv r9&gt...&lt/div&gt
+</code></pre>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="VAR_CONTAINER">
+                <span class="title">CONTAINER<span class="subtitle s s100"></span></span>
+
+                <span class="text multiline">
+                    <p>Variable holding the color picker html container element.</p>
+                </span>
+
+                <div class="block sub_block">
+                    <span class="title">Example</span>
+
+<pre><code class="language-javascript">
+//To get the color picker html container element
+picker.CONTAINER;
+//Returns: &ltdiv id="container"&gt...&lt/div&gt
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="EVENTS">
+            <span class="title">Events</span>
+            
+            <span class="text"><p>Related to event listeners.</p></span>
+
+            <div class="block sub_block" id="VAR_EVENT">
+                <span class="title">EVENT</span>
+
+                <span class="text">
+                    <p>The events listeners available for the color picker. Some events can be check on this <span class="text_link" data-goto="DEMO">example</span>.</p>
+                </span>
+
+                <table class="method_details table-auto">
+                    <tbody>
+                        <tr>
+                            <th>R9Picker constant</th>
+                            <th>Trigger(s)</th>
+                            <th>Callback parameter(s)</th>
+                            <th>Since</th>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.VISIBILITY</td>
+                            <td>- When the visibility (hide/show) of the color picker element, or container, changes, either by user action or by code (See <span class="text_link" data-goto="VISIBILITY">Visibility</span>).</td>
+                            <td>Boolean (true if showing, false if hidden).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.TAB_CHANGE</td>
+                            <td>- When a new tab is "selected", either by user action or by code (See <span class="text_link" data-goto="TAB">Tab</span>).</td>
+                            <td>String (tab name. See <span class="text_link" data-goto="TAB">Tab</span>).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.PICKING</td>
+                            <td>- When the user drags the color selectors inside the picking area.</td>
+                            <td>Object <span class="text_link" data-goto="VAR_COLOR">COLOR</span> (only as getter).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.PICKING_END</td>
+                            <td>- When the user release the mouse (mouseup) after dragging inside the picking area;<br>- When the previous color is restored;<br>- When the <span class="text_link" data-goto="EYE_DROPPER">EyeDropper</span> is used;<br>- When a color from any palette is picked;<br>- Right after the input event is triggered.</td>
+                            <td>Object <span class="text_link" data-goto="VAR_COLOR">COLOR</span> (only as getter).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.CANCELED</td>
+                            <td>- When the user clicks the "Cancel" button.</td>
+                            <td>-</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.SET</td>
+                            <td>- When the user clicks the "Set" button.</td>
+                            <td>Object (key "<b>current</b>": object representing the current color; key "<b>previous</b>": object representing the previous color set. Both internal objects are equal to the <span class="text_link" data-goto="VAR_COLOR">COLOR</span> object).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.COLOR_SAVED</td>
+                            <td>- When the user clicks the save button (See <span class="text_link" data-goto="SAVED">Saved</span>).</td>
+                            <td>Object (key "<b>color</b>": object representing the color added to the palette; key "<b>palette</b>": array with objects representing the color palette (including the color added). All internal objects are equal to the <span class="text_link" data-goto="VAR_COLOR">COLOR</span> object).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.COLOR_UNSAVED</td>
+                            <td>- When the user removes a color from the saved palette (See <span class="text_link" data-goto="SAVED">Saved</span>).</td>
+                            <td>Object (key "<b>color</b>": object representing the color removed from the palette; key "<b>palette</b>": array with objects representing the color palette (does not includes the color removed). All internal objects are equal to the <span class="text_link" data-goto="VAR_COLOR">COLOR</span> object).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                        <tr>
+                            <td>R9Picker.EVENT.INPUT</td>
+                            <td>- When the user presses (keydown) the "Enter" key while an input of the color picker is focused.</td>
+                            <td>Object (key "<b>space</b>": string representing the color space changed (e.g. "RGB"); key "<b>letter</b>": string representing the letter from the color space changed (e.g. "R" from "RGB"); key "<b>value</b>": number or string representing the value typed for the corresponding "letter"; key "<b>color</b>": object representing the color set (equals to the <span class="text_link" data-goto="VAR_COLOR">COLOR</span> object)).</td>
+                            <td><span class="s s100"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="block sub_block" id="ADD_EVENT">
+                <span class="title">addEventListener()<span class="subtitle s s100"></span></span>
+                                
+                <span class="text multiline">
+                    <p>Adds an event listener to the color picker.</p>
+                    <p>The same event can be added multiple times. Each event added will have an ID.</p>
+                </span>
+
+                <span class="title"><span class="subtitle param"></span></span>
+
+                <table class="method_details">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>event</td>
+                            <td><span class="text_link" data-goto="VAR_EVENT">R9Picker.EVENT constant</span></td>
+                            <td>Yes</td>
+                            <td>The event that will trigger the callback.</td>
+                        </tr>
+                        <tr>
+                            <td>callback</td>
+                            <td>Function</td>
+                            <td>Yes</td>
+                            <td>The action to be executed when the event set is triggered.</td>
+                        </tr>
+                    </tbody>
+                </table> 
+
+                <span class="title"><span class="subtitle ret"></span></span>
+
+                <table class="method_details">
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>The event's ID.</td>
+                        </tr>
+                    </tbody>
+                </table> 
+
+                <div class="block sub_block">
+                    <span class="title">Example</span>
+
+<pre><code class="language-javascript">
+//To add an input event
+picker.addEventListener(R9Picker.EVENT.INPUT, (data) => {
+    console.log(data.space);
+    //Might print (when triggered): "HSV" //Example
+});
+//Returns: 53 //Example of id returned
+
+//To add a set event
+picker.addEventListener(R9Picker.EVENT.SET, (data) => {
+    console.log(data);
+    /*
+    Might print (when triggered) //Example:
+        {
+            current: {
+                rgb: "rgb(143, 29, 213, 255)",
+                cmyk: "cmyk(33%, 86%, 0%, 16%, 255)",
+                hsl: "hsl(277°, 76%, 47%, 255)",
+                hsv: "hsv(277°, 86%, 84%, 255)",
+                Lab: "Lab(40, 72.9, -70.8, 255)",
+                hex: "#8F1DD5FF"
+            },
+            previous: {
+                rgb: "rgb(26, 214, 76, 255)",
+                cmyk: "cmyk(88%, 0%, 64%, 16%, 255)",
+                hsl: "hsl(136°, 78%, 47%, 255)",
+                hsv: "hsv(136°, 88%, 84%, 255)",
+                Lab: "Lab(75.1, -73.2, 66.1, 255)",
+                hex: "#1AD64CFF"
+            }
+        }
+    */
+});
+//Returns: 54 //Example of id returned
+
+//To add a visibility event
+picker.addEventListener(R9Picker.EVENT.VISIBILITY, (b) => {
+    console.log(b);
+    //Might print (when triggered): "false" //Example
+});
+//Returns: 54 //Example of id returned
+
+//To add a canceled event
+picker.addEventListener(R9Picker.EVENT.CANCELED, () => {
+    console.log("banana");
+    //Will print (when triggered): "banana"
+});
+//Returns: 55 //Example of id returned
+</code></pre>
+                </div>
+            </div>
+
+            <div class="block sub_block" id="REMOVE_EVENT">
+                <span class="title">removeEventListener()<span class="subtitle param"></span><span class="subtitle s s100"></span></span>
+                                
+                <span class="text">
+                    <p>Removes one or all event listener from the color picker.</p>
+                </span>
+
+                <table class="method_details">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>eventOrId</td>
+                            <td>Event's ID or <span class="text_link" data-goto="VAR_EVENT">R9Picker.EVENT constant</span></td>
+                            <td>Yes</td>
+                            <td>If a <span class="text_link" data-goto="VAR_EVENT">R9Picker.EVENT constant</span> is passed all the corresponding events will be removed. If a event's ID is passed only the corresponding event will be removed.</td>
+                        </tr>
+                    </tbody>
+                </table> 
+
+                <div class="block sub_block">
+                    <span class="title">Example</span>
+
+<pre><code class="language-javascript">
+//To remove the event of ID 53
+picker.removeEventListener(53);
+
+//To remove all "input" events
+picker.removeEventListener(R9Picker.EVENT.INPUT);
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" id="EXTRA">
+            <span class="title">Extra</span>
+            
+            <span class="text"><p>Related to extra features included in the color picker.</p></span>
+
+            <div class="block sub_block" id="EYE_DROPPER">
+                <span class="title">EyeDropper</span>
+
+                <span class="text multiline">
+                    <p>The color picker includes the web feature EyeDropper, that allows the user to select any color from the device's screen.</p>
+                    <p>If the feature is not supported by the user's browser, the EyeDropper button will be removed from the color picker. (See <a class="text_link" href="https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper#browser_compatibility" target="_blank" rel="noopener noreferrer">browser compatibility</a>).</p>
+                </span>
+            </div>
+
+            <div class="block sub_block" id="CLICK_TO_COPY">
+                <span class="title">Click to copy</span>
+
+                <span class="text multiline">
+                    <p>A color will be copied to the user's clipboard when:</p>
+                    <p>- The user clicks on a letter from any input group. The color will be copied with the corresponding group string format, e.g. "hsv(47°, 87%, 59%)";</p>
+                    <p>- The user clicks on the "Old", "Current" or sample color. The color will be copied in the hex format.</p>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="block" id="LOG">
+            <span class="title">Log</span>
+
+            <div class="text multiline" style="margin-top: 20px;">
+                <p class="multiline-list_item">v1.0.0<span id="latest">Latest</span></p>
+            </div>
+        </div>
+
+        <div class="block" id="R9">
+            <span class="title">Rainbow9</span>
+
+            <div class="text">
+                <p>Rainbow9 Picker (R9Picker) has the <a class="text_link" href="https://hms-douglas.github.io/rainbow9" target="_blank" rel="noopener noreferrer">Rainbow9 (R9)</a> library built-in, and can be accessed using the corresponding static object (R9).</p>
+            </div>
+
+            <table class="table table-fit">
+                <tbody>
+                    <tr>
+                        <th>R9Picker version</th>
+                        <th>R9 built-in version</th>
+                    </tr>
+                    <tr>
+                        <td class="td_num">v1.0.0</td>
+                        <td class="td_num">v1.1.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="block" id="LICENSE" style="margin-bottom: 60px;">
+            <span class="title">License</span>
+
+            <div class="text multiline">
+                <p>MIT License</p>
+
+                </p>Copyright (c) 2024 Douglas Silva</p>
+                
+                <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:</p>
+
+                <p>The above copyright notice and this permission notice shall be included in all
+                copies or substantial portions of the Software.</p>
+
+                <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                SOFTWARE.
+                </p>
+            </div>
+
+            <div class="block sub_block" id="CREDITS">
+                <span class="title">Credits</span>
+
+                <span class="text multiline">
+                    <p>- The Rainbow9 Picker library uses the code from Barret Sonntag, released under the MIT License on CodePen. This code is used only to help changing the color of the icons in the color picker user interface (See <span class="text_link" data-goto="UI_COLOR">UI color</span>). Some modifications were made to the original code, which can be found at <a class="text_link" href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank" rel="noopener noreferrer">https://codepen.io/sosuke/pen/Pjoqqp</a>.</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <!-- THIS PAGE USES "highlight.js" BY "highlightjs" AVAILABLE AT "https://highlightjs.org"-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- THIS PAGE USES "hightlight-line-numbers" BY "wcoder" AVAILABLE AT "https://wcoder.github.io/highlightjs-line-numbers.js"-->
+    <script src="js/hightlight-line-numbers.min.js"></script>
+    <script src="js/r9picker_1.0.0.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
