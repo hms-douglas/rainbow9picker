@@ -27,7 +27,13 @@ See the [**documentation**](https://hms-douglas.github.io/rainbow9picker) for de
 <br/>
 <h2>Donations</h2>
 
-If you would like to support me, you can make a donation on paypal clicking [**here**](https://www.paypal.com/donate/?hosted_button_id=6FPD9BUFGXD44)... Thank you! :heart:
+If you would like to support me, you can make a donation on paypal clicking [**here**](https://www.paypal.com/donate/?hosted_button_id=6FPD9BUFGXD44)... Or use one of the options bellow. Thank you! :heart:
+</br>
+
+ Coin | Address
+----|----|
+Bitcoin | 3NkK4LMwMhKefe2phqf7Vrp1uQynu1Gs6x
+Ethereum | 0xfea5dd21ebf73c5b4a2445c7713f6b5316dfac4d
 
 <br/>
 <h2>License</h2>
